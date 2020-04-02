@@ -36,7 +36,7 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch,props)=>{
   return ({
     onSubmit: (id,expense) => dispatch(editExpense(id, expense)),
-    removeClick: (data)=> dispatch(removeExpense(data))
+    onClick: (data)=> dispatch(removeExpense(data))
     })
   }
 
