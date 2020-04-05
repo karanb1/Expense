@@ -1,12 +1,11 @@
 import uuid from 'uuid';
 import database from '../firebase/firebase';
-
 // ADD_EXPENSE
 export const addExpense = (expense) => ({
   type: 'ADD_EXPENSE',
   expense
 });
-
+//dispatching an action fn using thunk
 export const startAddExpense = (expenseData={})=>{
   return (dispatch) =>{
     const {
@@ -37,3 +36,25 @@ export const editExpense = (id, updates) => ({
   id,
   updates
 });
+//Set expense
+export const setExpense = (expenses)=>({
+  type: "SET_EXPENSE",
+  expenses
+})
+//dispatching an action fn using thunk
+export const startSetExpense = () => {
+  return (dispatch) => {
+    const expenses = [];
+    return database.ref(`expenses`).once('value')
+      .then( (snapshot) => {
+        snapshot.forEach( (childSnapshot) => {
+          expenses.push({
+            id: childSnapshot.key,
+            ...childSnapshot.val(),
+          })
+        })
+        dispatch(setExpense(expenses));
+      })
+  }
+}
+  
