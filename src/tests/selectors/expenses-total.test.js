@@ -8,5 +8,5 @@ test("Should return 0 if there are no expenses",()=>{
 
 test("Should return value if there are expenses",()=>{
     const response = Expensestotal(expenses);
-    expect(response).toEqual([1141.95,3]);
+    expect(response).toEqual([114195,3]);
 });

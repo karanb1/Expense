@@ -7,5 +7,5 @@ export default(expenses)=>{
         val++;
         return sum+value;
     },0)
-    return [total/100,val];
+    return [total,val];
 }
