@@ -1,5 +1,8 @@
 .list{
     padding: $s-size $xl-size*4;
+    @media (max-width: $desktop-breakpoint) {
+        padding: $s-size;
+    }
 }
 
 .mobile{
