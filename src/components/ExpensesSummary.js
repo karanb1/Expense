@@ -1,18 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux'
 import expensesTotal from '../selectors/expenses-total';
 import numeral from 'numeral';
 
 export const ExpensesSummary = (props) => (
-    <div>
-    {props.expenses[1] === 0 ? 
-        (false)
-        : 
-        (props.expenses[1] === 1 ? 
-        (<h1>Your total for {props.expenses[1]} expense is {numeral(props.expenses[0]).format('0,0.00')} INR </h1>)
-       :
-        (<h1>Your total for {props.expenses[1]} expenses is {numeral(props.expenses[0]).format('0,0.00')} INR </h1>))}
-    </div>
+    <div className= "summary">
+         <div>
+          { 
+           (props.expenses[1] === 1 ? 
+           (<p>Viewing <b>{props.expenses[1]}</b> expense totalling <b>{numeral(props.expenses[0]).format('0,0.00')} INR</b></p>)
+           :
+           (<p>Viewing <b>{props.expenses[1]}</b> expenses totalling <b>{numeral(props.expenses[0]).format('0,0.00')} INR</b> </p>))}
+       </div>
+       <div className="add">
+          <Link className="button" to="/create">
+            Add Expense
+          </Link>
+       </div>
+ </div>
 )
 
 const mapStateToProps =(state) => {

@@ -12,7 +12,9 @@ export class AddExpensePage extends React.Component{
   render(){
     return(
       <div>
+      <div className="summary" style={{paddingTop:40+'px', paddingBottom:40+'px'}}>
       <h1>Add Expense</h1>
+      </div>
       <ExpenseForm
         onSubmit= {this.onSubmit}//after testing
       />

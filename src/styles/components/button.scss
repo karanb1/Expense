@@ -1,0 +1,22 @@
+.button{
+    color: $white;;
+    background:#34A853;
+    border: none;
+    padding: $s-size $m-size;
+    border-radius: 3px;
+}
+
+.button:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.remove{
+    margin: 0 $xl-size*4;
+    color: $white;;
+    background: #d9534f;
+    border: none;
+    padding: $s-size*1.1 $m-size*1.05;
+    border-radius: 3px;
+}

@@ -1,0 +1,26 @@
+.head{
+    display: flex;
+    justify-content: space-between;
+    padding: $m-size*1.5 $xl-size*4;
+    background: $light-green;
+    @media (max-width: $desktop-breakpoint) {
+        padding: $s-size;
+    }
+}
+
+.title{
+    text-decoration: none;
+    color: $white;
+    @media (max-width: $desktop-breakpoint) {
+        font-size: $s-size;
+    }
+}
+
+.logout{
+    font-size: $m-size;
+    border: none;
+    color: $white;
+    background-color: $light-green;
+}
+
+

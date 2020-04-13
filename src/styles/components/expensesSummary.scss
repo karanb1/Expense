@@ -1,0 +1,22 @@
+.summary{
+    padding: $m-size*0.9 $xl-size*4;
+    background: $grey;
+    p{
+        font-size: $l-size;
+        @media (max-width: $desktop-breakpoint) {
+            font-size: $m-size*1.2;
+        }
+    }
+    @media (max-width: $desktop-breakpoint) {
+        padding: $s-size;
+    }
+}
+
+.add{
+    text-decoration: none;
+    margin-bottom: $m-size*1.2;
+}
+
+.button{
+    text-decoration: none;
+}

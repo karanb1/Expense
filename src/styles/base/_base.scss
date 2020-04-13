@@ -5,6 +5,9 @@ html {
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
+  color: $font-color;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 button {
@@ -17,4 +20,12 @@ button:disabled {
 
 .is-active {
   font-weight: bold;
+}
+
+h1{
+  margin: 0;
+}
+
+h3{
+  margin: $s-size 0 $s-size 0;
 }

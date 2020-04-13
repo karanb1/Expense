@@ -27,11 +27,12 @@ export class ExpenseListFilters extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="filter">
         <input
           type="text"
           value={this.props.filters.text}
           onChange={this.onTextChange}
+          placeholder="Search Expenses"
         />
         <select
           value={this.props.filters.sortBy}
