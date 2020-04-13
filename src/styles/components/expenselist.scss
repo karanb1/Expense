@@ -35,6 +35,8 @@
     padding-left: $m-size;
     padding-right: $m-size;
     border-top:none;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .item{
@@ -42,8 +44,21 @@
     color: $font-color;
 }
 
+.listitem:hover{
+    background-color: $grey;
+}
+
 .time {
     color: $dark-grey;
     font-size: $m-size;
 }
 
+.notadded{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: $s-size;
+    border: 1px solid darken($grey,17%);
+    margin: 0;
+    border-top: none;
+}

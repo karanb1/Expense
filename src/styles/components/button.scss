@@ -1,6 +1,6 @@
 .button{
     color: $white;;
-    background:#34A853;
+    background: #34A853;
     border: none;
     padding: $s-size $m-size;
     border-radius: 3px;
@@ -14,9 +14,14 @@
 
 .remove{
     margin: 0 $xl-size*4;
+    height: 50px;
+    width: 150px;
     color: $white;;
     background: #d9534f;
     border: none;
-    padding: $s-size*1.1 $m-size*1.05;
+    padding: $s-size $m-size;
     border-radius: 3px;
+    @media (max-width: $desktop-breakpoint) {
+        margin: 0 0 0 12px;
+    }
 }

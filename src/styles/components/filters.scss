@@ -8,15 +8,21 @@
         font-size: $m-size*1.2;
         font-weight: 300;
         padding: $s-size*0.8;
+        @media (max-width: $desktop-breakpoint) {
+            padding: $s-size;
+        }
     }
 
     select{
         width: 150px;
         font-size: $m-size*1.2;
+        @media (max-width: $desktop-breakpoint) {
+            padding: $s-size;
+        }
     }
 
     @media (max-width: $desktop-breakpoint) {
-        padding: $s-size;
         flex-direction: column;
+        padding: $s-size*0.8;
     }
 }
