@@ -17,5 +17,6 @@
 
     @media (max-width: $desktop-breakpoint) {
         padding: $s-size;
+        flex-direction: column;
     }
 }
